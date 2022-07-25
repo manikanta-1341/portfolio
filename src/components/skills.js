@@ -1,7 +1,7 @@
 
 import { Box, Card, CardContent,  Typography, Button, Grid, CardActions } from "@mui/material";
 import { keyframes } from '@emotion/react'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { SkillsComp } from "../slice/slice";
 
 export default function Skills() {
@@ -43,7 +43,7 @@ export default function Skills() {
                                     <img
                                         width="75px"
                                         height="75px"
-                                        alt="html image"
+                                        alt="html_image"
                                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png"
                                     />
                                 </Grid>
@@ -51,7 +51,7 @@ export default function Skills() {
                                     <img
                                         width="65px"
                                         height="75px"
-                                        alt="Css image"
+                                        alt="Css_image"
                                         src="https://seeklogo.com/images/C/css3-logo-F1923C8D0E-seeklogo.com.png"
                                         sx={{ width: 36, height: 36 }}
                                     />
@@ -60,7 +60,7 @@ export default function Skills() {
                                     <img
                                         width="65px"
                                         height="65px"
-                                        alt="Js image"
+                                        alt="Js_image"
                                         src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
                                     />
                                 </Grid>
@@ -68,7 +68,7 @@ export default function Skills() {
                                     <img
                                         width="75px"
                                         height="75px"
-                                        alt="React image"
+                                        alt="React_image"
                                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" />
                                 </Grid>
                                 <Grid item xs={4} sx={img_styles}>
@@ -78,7 +78,7 @@ export default function Skills() {
                                     <img
                                         width="75px"
                                         height="75px"
-                                        alt="nodeJs image"
+                                        alt="nodeJs_image"
                                         src="https://nodejs.org/static/images/logo.svg"
                                     />
                                 </Grid>
@@ -86,7 +86,7 @@ export default function Skills() {
                                     <img
                                         width="130px"
                                         height="100px"
-                                        alt="Mongodb image"
+                                        alt="Mongodb_image"
                                         src="https://res.cloudinary.com/bigbang/image/upload/v1644955705/2560px-MongoDB_Logo.svg_hugqcc.png"
                                     />
                                 </Grid>
