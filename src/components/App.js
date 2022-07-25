@@ -1,11 +1,12 @@
-import { useState } from 'react';
 import { Box, Grid,  Typography } from '@mui/material'
 import '../App.css';
 import Skills from '../components/skills';
 import {useDispatch , useSelector} from 'react-redux'
-import { ProjectsComp, SkillsComp, AboutComp } from '../slice/slice'
+import { ProjectsComp, SkillsComp, AboutComp,ContactComp } from '../slice/slice'
 import Projects from '../components/projects';
 import About from './About';
+import Contact from './contact';
+
 function App() {
   const Atag_styles = {
     textDecoration:"none",
@@ -21,6 +22,7 @@ function App() {
   const aboutCompOpen = useSelector(state=>state.aboutCompOpen)
   const skillsCompOpen = useSelector(state=>state.skillsCompOpen)
   const projectCompOpen = useSelector(state=>state.projectCompOpen)
+  const contactCompOpen = useSelector(state=>state.contactCompOpen)
  
   const handleComp = (e)=>{ 
     switch (e.target.innerText) {
@@ -36,6 +38,10 @@ function App() {
         dispatch(ProjectsComp())
         break;
       }
+      case "Contact Me":{
+        dispatch(ContactComp())
+        break;
+      }
     
       default:
         break;
@@ -49,11 +55,12 @@ function App() {
           flexDirection:"column",
           justifyContent:"center",
           color: "white",
-          backgroundColor: "rgb(8, 31, 73)",
-          minHeight:"695px",
+          background:`url(https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg)`,
+          backgroundPosition:"center",
+          backgroundSize:"cover",
+          minHeight:"100vh",
           height:"100%",
-          weight: "100vw",
-          filter:skillsCompOpen || projectCompOpen || aboutCompOpen ?"blur(15px)":"" 
+          filter:skillsCompOpen || projectCompOpen || aboutCompOpen || contactCompOpen ?"blur(15px)":"" 
         }
         }
       >
@@ -89,12 +96,19 @@ function App() {
               onClick={(e)=>handleComp(e)}
               >Projects</Typography>
             </Grid>
+            <Grid item >
+              <Typography component="a"
+              sx={Atag_styles} 
+              onClick={(e)=>handleComp(e)}
+              >Contact Me</Typography>
+            </Grid>
           </Grid>
         </Box>
       </Box>
       {aboutCompOpen?<About/>:<></>}
       {skillsCompOpen?<Skills/>:<></>}
       {projectCompOpen?<Projects/>:<></>}
+      {contactCompOpen?<Contact/>:<></>}
     </>
   );
 }

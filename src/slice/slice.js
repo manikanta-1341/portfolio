@@ -4,6 +4,7 @@ const initial_State = {
     aboutCompOpen:false,
     skillsCompOpen:false,
     projectCompOpen:false,
+    contactCompOpen:false,
     currentCompOpen:''
   
 }
@@ -33,6 +34,14 @@ export const Slice = createSlice({
             //currentCompOpen:"ProjectsComp"
         }
     }
+    ,
+    ContactComp:(state)=>{
+        return{
+            ...state,
+            contactCompOpen:!state.contactCompOpen,
+            //currentCompOpen:"ProjectsComp"
+        }
+    }
   },
 })
 
@@ -41,6 +50,7 @@ export const {
     AboutComp, 
     SkillsComp, 
     ProjectsComp,
+    ContactComp,
 } = Slice.actions
 
 export default Slice.reducer

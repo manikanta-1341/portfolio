@@ -7,16 +7,24 @@ import { ProjectsComp } from '../slice/slice'
 export default function Projects() {
     const dispatch = useDispatch()
     const link_style = {
-        color: "white",
+        color: "black",
+        fontWeight:"500",
         "&:hover": {
-            color: "white",
+            color: "black",
             textDecoration: "underline",
         }
     }
+    const Description_styles = {
+        color: "text.secondary",
+        fontFamily: "Roboto,san-serif",
+        textTransform: "capitalize"
+    }
+    const link_heading_styles = { color: "black" }
     const [gmailDropDown, setGmailDropDown] = useState(false)
     const [pizzaDropDown, setPizzaDropDown] = useState(false)
     const [btDropDown, setBtDropDown] = useState(false)
     const [videoCallDropDown, setVideoCallDropDown] = useState(false)
+
     const animation = keyframes({
         from: {
             zIndex: 0,
@@ -28,7 +36,6 @@ export default function Projects() {
 
         }
     })
-    const [currentComp, setCurrentComp] = useState(null)
     const CompChange = (value) => {
         if (value === "gmail") {
             setGmailDropDown(!gmailDropDown)
@@ -58,7 +65,7 @@ export default function Projects() {
     }
     return (
         <Box>
-            <Card sx={{ animation: `${animation} 2s ease`, mx: "auto", position: "absolute", p: 1, textAlign: "center", top: "50%", left: "50%", transform: "translate(-50%,-50%)", backgroundColor: "#4d5277", borderRadius: "1rem" }}>
+            <Card sx={{ animation: `${animation} 2s ease`, mx: "auto", position: "absolute", p: 1, textAlign: "center", top: "50%", left: "50%", transform: "translate(-50%,-50%)", backgroundColor: "white", borderRadius: "1rem" }}>
                 <CardContent>
                     <Stack spacing={2}>
                         <Stack >
@@ -71,13 +78,13 @@ export default function Projects() {
                             {gmailDropDown ?
                                 <Box>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h6" sx={{ color: "white", fontFamily: "Roboto,san-serif", textTransform: "capitalize" }}>
+                                    <Typography variant="h6" sx={Description_styles}>
                                         Desktop based application build using Electron, that can slove our daily emailing needs with simple and interative
                                         interface by which user can send,receive,mark important as starred..
                                     </Typography>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
 
-                                    <Typography variant="h5" sx={{ color: "black" }}>
+                                    <Typography variant="h5" sx={link_heading_styles}>
                                         Github Repo's
                                     </Typography>
                                     <Stack>
@@ -87,8 +94,8 @@ export default function Projects() {
                                 </Box> : null}
                         </Stack>
 
-                        <Divider sx={{ mb: 1, borderColor: "white",  }} orientation="horizontal" variant="fullWidth" flexItem />
-                            
+                        <Divider sx={{ mb: 1, borderColor: "white", }} orientation="horizontal" variant="fullWidth" flexItem />
+
                         <Stack >
                             <Stack direction="row" justifyContent="space-between">
                                 <IconButton onClick={() => CompChange('pizza')}>
@@ -99,12 +106,12 @@ export default function Projects() {
                             {pizzaDropDown ?
                                 <Box>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h6" sx={{ fontFamily: "Roboto,san-serif", color: "white", textTransform: "capitalize" }}>
+                                    <Typography variant="h6" sx={Description_styles}>
                                         Pizza ordering application with admin dashboard to get latest details of the inventory,
                                         and also razorpay is used as the payment gateway to complete the purchase.
                                     </Typography>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h5" sx={{ color: "black" }}>
+                                    <Typography variant="h5" sx={link_heading_styles}>
                                         Github Repo's
                                     </Typography>
                                     <Stack>
@@ -112,7 +119,7 @@ export default function Projects() {
                                         <Link href="https://github.com/manikanta-1341/pizza_delivery_backend" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h5" sx={{ color: "black" }}>
+                                    <Typography variant="h5" sx={link_heading_styles}>
                                         Website Links
                                     </Typography>
                                     <Stack>
@@ -140,12 +147,12 @@ export default function Projects() {
                             {btDropDown ?
                                 <Box >
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h6" sx={{ fontFamily: "Roboto,san-serif", color: "white", textTransform: "capitalize" }}>
+                                    <Typography variant="h6" sx={Description_styles}>
                                         Entertainment application that can used to search movies and book them accordingly.
                                         razorpay gateway is used for payment. we have admin dashboard so that admin control movies & theaters list..
                                     </Typography>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h5" sx={{ color: "black" }}>
+                                    <Typography variant="h5" sx={link_heading_styles}>
                                         Github Repo's
                                     </Typography>
                                     <Stack>
@@ -153,7 +160,7 @@ export default function Projects() {
                                         <Link href="https://github.com/manikanta-1341/ticket-booking-backend" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h5" sx={{ color: "black" }}>
+                                    <Typography variant="h5" sx={link_heading_styles}>
                                         Website Link's
                                     </Typography>
                                     <Stack>
@@ -177,11 +184,11 @@ export default function Projects() {
                             {videoCallDropDown ?
                                 <Box >
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h6" sx={{ fontFamily: "Roboto,san-serif", color: "white", textTransform: "capitalize" }}>
+                                    <Typography variant="h6" sx={Description_styles}>
                                         One to One video chat application
                                     </Typography>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h5" sx={{ color: "black" }}>
+                                    <Typography variant="h5" sx={link_heading_styles}>
                                         Github Repo's
                                     </Typography>
                                     <Stack>
@@ -189,7 +196,7 @@ export default function Projects() {
                                         <Link href="https://github.com/manikanta-1341/videoCall-backend" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
                                     <Divider sx={{ mb: 1, color: "black" }} orientation="horizontal" variant="fullWidth" flexItem />
-                                    <Typography variant="h5" sx={{ color: "black" }}>
+                                    <Typography variant="h5" sx={link_heading_styles}>
                                         Website Link's
                                     </Typography>
                                     <Stack>
@@ -207,7 +214,7 @@ export default function Projects() {
                     <Button
 
                         sx={{
-                            p: 2, mx: "auto", color: "white", fontSize: "1.2rem", "&:hover": {
+                            p: 2, mx: "auto", color: "black", fontSize: "1.2rem", "&:hover": {
                                 textDecoration: "underline"
                             }
                         }}

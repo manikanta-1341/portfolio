@@ -6,7 +6,6 @@ import { SkillsComp } from "../slice/slice";
 
 export default function Skills() {
     const dispatch = useDispatch()
-    const currentCompOpen = useSelector(state => state.currentCompOpen)
     const img_styles = {
         textAlign: "center"
     }
