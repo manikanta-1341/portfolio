@@ -1,5 +1,5 @@
 
-import { Box, Card, CardContent,  Typography, Button, Grid, CardActions } from "@mui/material";
+import { Box, Card, CardContent,  Typography, Button, Grid, CardActions,useMediaQuery } from "@mui/material";
 import { keyframes } from '@emotion/react'
 import { useDispatch } from "react-redux";
 import { SkillsComp } from "../slice/slice";
@@ -24,22 +24,24 @@ export default function Skills() {
     const Homebtn = () => {
         dispatch(SkillsComp())
     }
+    const lgScreen = useMediaQuery('(min-width:900px)')
     return (
         <>
             <Box
+            
                 sx={{
                     position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%,-50%)",
-                    animation: `${animation} 2s ease`
+                    top: "50%" ,
+                    left: !lgScreen ?"14%":"50%",
+                    transform: !lgScreen ?"translate(-8%,-50%)":"translate(-50%,-50%)",
+                    animation: lgScreen && `${animation} 2s ease`
                 }}
             >
-                <Card sx={{ backgroundColor: "#b6b6b670" }} >
+                <Card sx={{ backgroundColor: "#b6b6b670"}} >
                     <CardContent >
                         <Box sx={{ p: "5px" }}>
                             <Grid container rowSpacing={3} alignItems="center" mt={2} >
-                                <Grid item xs={4} sx={img_styles}>
+                                <Grid item xs={6} md={4} sx={img_styles}>
                                     <img
                                         width="75px"
                                         height="75px"
@@ -47,7 +49,7 @@ export default function Skills() {
                                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png"
                                     />
                                 </Grid>
-                                <Grid item xs={4} sx={img_styles}>
+                                <Grid item xs={6} md={4} sx={img_styles}>
                                     <img
                                         width="65px"
                                         height="75px"
@@ -56,7 +58,7 @@ export default function Skills() {
                                         sx={{ width: 36, height: 36 }}
                                     />
                                 </Grid>
-                                <Grid item xs={4} sx={img_styles}>
+                                <Grid item xs={6} md={4} sx={img_styles}>
                                     <img
                                         width="65px"
                                         height="65px"
@@ -64,17 +66,17 @@ export default function Skills() {
                                         src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
                                     />
                                 </Grid>
-                                <Grid item xs={4} sx={img_styles}>
+                                <Grid item xs={6} md={4} sx={img_styles}>
                                     <img
                                         width="75px"
                                         height="75px"
                                         alt="React_image"
                                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" />
                                 </Grid>
-                                <Grid item xs={4} sx={img_styles}>
+                                <Grid item xs={6} md={4} sx={img_styles}>
                                     <Typography variant="h4">express</Typography>
                                 </Grid>
-                                <Grid item xs={4} sx={img_styles}>
+                                <Grid item xs={6} md={4} sx={img_styles}>
                                     <img
                                         width="75px"
                                         height="75px"
@@ -82,7 +84,7 @@ export default function Skills() {
                                         src="https://nodejs.org/static/images/logo.svg"
                                     />
                                 </Grid>
-                                <Grid item xs={4} sx={img_styles}>
+                                <Grid item xs={6} md={4} sx={img_styles}>
                                     <img
                                         width="130px"
                                         height="100px"

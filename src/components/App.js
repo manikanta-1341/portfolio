@@ -1,4 +1,4 @@
-import { Box, Grid,  Typography } from '@mui/material'
+import { Box, Grid,  Typography,useMediaQuery } from '@mui/material'
 import '../App.css';
 import Skills from '../components/skills';
 import {useDispatch , useSelector} from 'react-redux'
@@ -23,7 +23,10 @@ function App() {
   const skillsCompOpen = useSelector(state=>state.skillsCompOpen)
   const projectCompOpen = useSelector(state=>state.projectCompOpen)
   const contactCompOpen = useSelector(state=>state.contactCompOpen)
- 
+  const lgScreen = useMediaQuery('(min-width:900px)')
+
+  
+
   const handleComp = (e)=>{ 
     switch (e.target.innerText) {
       case "About":{
@@ -60,6 +63,7 @@ function App() {
           backgroundSize:"cover",
           minHeight:"100vh",
           height:"100%",
+          overflow:"auto",
           filter:skillsCompOpen || projectCompOpen || aboutCompOpen || contactCompOpen ?"blur(15px)":"" 
         }
         }
@@ -76,7 +80,7 @@ function App() {
           <Grid
             container
             justifyContent="center"
-            spacing={8}
+            spacing={lgScreen ?8 : 4} 
           >
             <Grid item >
               <Typography component="a"
