@@ -38,7 +38,7 @@ export default function Contact() {
                         <Button sx={{ fontSize: "1.5rem", color: "rgb(8, 31, 73)" }} component="a" href="https://www.linkedin.com/in/medicharla-manikanta-ba5576192/" underline="none">Linkedin Profile</Button>
                     </Stack>
                 </CardContent>
-                <CardActions sx={{p:lgScreen ? 8 : 0}}>
+                <CardActions sx={{p: 0}}>
                     <Button
 
                         sx={{

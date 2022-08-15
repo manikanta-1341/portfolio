@@ -20,7 +20,7 @@ export default function Projects() {
     }
     const heading_styles={
         fontWeight:"bold",
-        fontSize:"1.2rem"
+        fontSize:lgScreen?"1.5rem":"1.2rem"
     }
     const Description_styles = {
         color: "text.secondary",
@@ -116,7 +116,7 @@ export default function Projects() {
                                         Github Repo's
                                     </Typography>
                                     <Stack 
-                                    direction={!lgScreen &&"row"} spacing={!lgScreen && 2} justifyContent={!lgScreen && "center"}
+                                    direction={"row" } spacing={2} justifyContent={"center"}
                                     
                                     >
                                         <Link href="https://github.com/manikanta-1341/gmail.clone-frontend" target="_blank" underline="none" sx={link_style}>Client Side</Link>
@@ -145,7 +145,7 @@ export default function Projects() {
                                     <Typography  sx={link_heading_styles}>
                                         Github Repo's
                                     </Typography>
-                                    <Stack direction={!lgScreen &&"row"} spacing={!lgScreen && 2} justifyContent={!lgScreen && "center"}>
+                                    <Stack direction={"row" } spacing={2} justifyContent={"center"}>
                                         <Link href="https://github.com/manikanta-1341/pizza_delivery_frontend" target="_blank" underline="none" sx={link_style}>Client Side</Link>
                                         <Link href="https://github.com/manikanta-1341/pizza_delivery_backend" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
@@ -153,7 +153,7 @@ export default function Projects() {
                                     <Typography  sx={link_heading_styles}>
                                         Website Links
                                     </Typography>
-                                    <Stack direction={!lgScreen &&"row"} spacing={!lgScreen && 2} justifyContent={!lgScreen && "center"}>
+                                    <Stack direction={"row" } spacing={2} justifyContent={"center"}>
                                         <Link href="https://reduxpizzadelivery.netlify.app" target="_blank" underline="none" sx={link_style}>Client Side</Link>
                                         <Link href="https://redux-pizza-delivery.herokuapp.com" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
@@ -186,7 +186,7 @@ export default function Projects() {
                                     <Typography  sx={link_heading_styles}>
                                         Github Repo's
                                     </Typography>
-                                    <Stack direction={!lgScreen &&"row"} spacing={!lgScreen && 2} justifyContent={!lgScreen && "center"}>
+                                    <Stack direction={"row" } spacing={2} justifyContent={"center"}>
                                         <Link href="https://github.com/manikanta-1341/ticket-booking-frontend" target="_blank" underline="none" sx={link_style}>Client Side</Link>
                                         <Link href="https://github.com/manikanta-1341/ticket-booking-backend" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
@@ -194,7 +194,7 @@ export default function Projects() {
                                     <Typography  sx={link_heading_styles}>
                                         Website Link's
                                     </Typography>
-                                    <Stack direction={!lgScreen &&"row"} spacing={!lgScreen && 2} justifyContent={!lgScreen && "center"}>
+                                    <Stack direction={"row" } spacing={2} justifyContent={"center"}>
                                         <Link href="https://redux-ticket-booking-app.netlify.app" target="_blank" underline="none" sx={link_style}>Client Side</Link>
                                         <Link href="https://redux-ticket-booking-app.herokuapp.com" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
@@ -222,7 +222,7 @@ export default function Projects() {
                                     <Typography  sx={link_heading_styles}>
                                         Github Repo's
                                     </Typography>
-                                    <Stack direction={!lgScreen &&"row"} spacing={!lgScreen && 2} justifyContent={!lgScreen && "center"}>
+                                    <Stack direction={"row" } spacing={2} justifyContent={"center"}>
                                         <Link href="https://github.com/manikanta-1341/videoCall-frontend" target="_blank" underline="none" sx={link_style}>Client Side</Link>
                                         <Link href="https://github.com/manikanta-1341/videoCall-backend" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
@@ -230,7 +230,7 @@ export default function Projects() {
                                     <Typography  sx={link_heading_styles}>
                                         Website Link's
                                     </Typography>
-                                    <Stack direction={!lgScreen &&"row"} spacing={!lgScreen && 2} justifyContent={!lgScreen && "center"}>
+                                    <Stack direction={"row" } spacing={2} justifyContent={"center"}>
                                         <Link href="https://friendly-seahorse-166aed.netlify.app" target="_blank" underline="none" sx={link_style}>Client Side</Link>
                                         <Link href="https://nodejs-videcall.herokuapp.com" target="_blank" underline="none" sx={link_style}>Server Side</Link>
                                     </Stack>
