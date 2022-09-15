@@ -6,6 +6,7 @@ import { ProjectsComp, SkillsComp, AboutComp,ContactComp } from '../slice/slice'
 import Projects from '../components/projects';
 import About from './About';
 import Contact from './contact';
+import { keyframes } from '@emotion/react'
 
 function App() {
   const Atag_styles = {
@@ -24,7 +25,6 @@ function App() {
   const projectCompOpen = useSelector(state=>state.projectCompOpen)
   const contactCompOpen = useSelector(state=>state.contactCompOpen)
   const lgScreen = useMediaQuery('(min-width:900px)')
-
   
 
   const handleComp = (e)=>{ 
@@ -72,7 +72,9 @@ function App() {
           sx={{ textAlign: "center" }}
         >
           <Typography variant="h3">Medicharla Manikanta</Typography>
-          <Typography variant="h5">Full Stack Devloper</Typography>
+          <Typography 
+          variant="h5"
+          >Full Stack Devloper</Typography>
         </Box>
         <Box
         sx={{mt:"1rem"}}

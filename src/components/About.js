@@ -65,7 +65,9 @@ export default function About() {
 
                             <Stack>
                                 <Box sx={{ mx: "auto" }}>
-                                    <Button component="a" href="https://drive.google.com/file/d/1FIdT7q5hLGeT2uljKd84hZADw7U6pAqV/view?usp=sharing" underline="none"
+                                    <Button 
+                                    component="a" 
+                                    href="https://drive.google.com/file/d/1tjzCXdrOhGG3QEScZ1WkY6rgP8TwaR5I/view?usp=sharing" underline="none"
                                         download rel="noopener noreferrer"
                                         sx={{
                                             color: "rgb(8, 31, 73)", fontSize: "1.2rem", "&:hover": {
